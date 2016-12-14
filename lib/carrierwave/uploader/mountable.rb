@@ -28,10 +28,11 @@ module CarrierWave
       #       end
       #     end
       #
-      def initialize(model=nil, mounted_as=nil)
+      def initialize(model=nil, mounted_as=nil, cloudinary_api=nil)
           binding.pry
         @model = model
         @mounted_as = mounted_as
+        @cloudinary_api = cloudinary_api
       end
 
     end # Mountable
