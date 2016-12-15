@@ -10,6 +10,9 @@ module CarrierWave
         self.processors = []
 
         before :cache, :process!
+        before :cache, :api_key
+        before :cahce, :api_secret
+        before :cache, :cloud_name
       end
 
       module ClassMethods
@@ -81,6 +84,15 @@ module CarrierWave
           end
           self.send(method, *args)
         end
+      end
+
+      def api_key
+      end
+
+      def api_secret
+      end
+
+      def cloud_name
       end
 
     end # Processing
