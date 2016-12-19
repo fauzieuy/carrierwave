@@ -26,6 +26,7 @@ module CarrierWave
     end
 
     def read_identifiers
+      binding.pry
       [record.read_uploader(serialization_column)].flatten.reject(&:blank?)
     end
 
